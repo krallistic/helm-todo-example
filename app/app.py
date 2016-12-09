@@ -18,6 +18,14 @@ def todo():
     return render_template('todo.html', items=todos)
 
 
+@app.route('/healthz')
+def healthz():
+    return "OK"
+
+@app.route('/readyz')
+def readyz():
+    return "OK"
+
 @app.route('/new', methods=['POST'])
 def new():
 
