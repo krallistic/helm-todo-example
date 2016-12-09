@@ -1,0 +1,22 @@
+replicaCount: 1
+image:
+  repository: jkaralus/todo-app
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  name: todoApp
+  type: ClusterIP
+  externalPort: 5000
+  internalPort: 5000
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+mongodb:
+  persistence.enabled : false
+  mongodbDatabase: "tododb"
+

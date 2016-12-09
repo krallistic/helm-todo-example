@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart which deploy a sample Todo App with an MongoDB backend.
+name: todoApp
+version: 0.1.0
